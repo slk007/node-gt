@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Assigment List
+  table
+    tr
+      th Title
+      th Option
+    if files
+      each file in files
+        tr
+          td #{file.metadata.title}
+          td
+             a(class='button', href='#') Download
+    else
+      p No Tests Yet

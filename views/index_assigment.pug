@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Assigment List
+  table
+    tr
+      th Title
+      th Due Date
+      th Option
+    if files
+      each file in files
+        tr
+          td #{file.metadata.title}
+          td #{file.metadata.due_date}
+          td
+             a(class='button', href='#') Download
+    else
+      p No Assigments Yet

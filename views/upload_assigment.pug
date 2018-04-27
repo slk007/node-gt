@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .container
+    h1 #{title}
+    form(action="/assigments/upload" method="POST" enctype="multipart/form-data")
+      #form-group
+        label Title:
+        input.form-control(name='title', type='text', required)
+        br
+      #form-group
+        label Due date:
+        input.form-control(name='due', type='date', required)
+        br
+      #form-group
+        label Select file to upload:  
+        input#fileToUpload.form-control(type="file", name="file", accept=".doc,.docx,.pdf" required)
+        br 
+      input.btn.btn-primary(type='submit', value='Upload', name="Upload")

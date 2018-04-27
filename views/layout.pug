@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title GuptaTutorials
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+  body
+    nav.navbar.navbar-expand-md.navbar-light.bg-light
+      a.navbar-brand(href="/")
+        img.d-inline-block.align-top.imageScr1(src="../images/logo.svg" width="30" height="30" alt="")
+      a.navbar-brand(href="/") GuptaTutorials
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbars.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href="/") Home 
+          li.nav-item
+            a.nav-link(href="/assigments") Assigments 
+          li.nav-item
+            a.nav-link(href="/tests") Tests   
+        ul.nav.navbar-nav.navbar-right
+          li.nav-item
+            a.nav-link(href="/assigments/upload") Upload Assigments   
+          li.nav-item
+            a.nav-link(href="/tests/upload") Upload Tests 
+          li
+            a.nav-link(href='#') Register
+          li 
+            a.nav-link(href='#') Login
+    block content
+    br
+    hr
+    section
+      .container
+        .media-container-row.align-center.mbr-white
+          .col-12
+            p.mbr-text.mb-0.mbr-fonts-style.display-7
+              a(href="#") Gupta Tutorials 
+              | © Copyright 2018 
+              |  - All Rights Reserved
+
+    script(src="/bower_components/jquery/dist/jquery.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+    script(src="/js/main.js")
+    
