@@ -1,18 +1,19 @@
 extends layout
 
 block content
-  h1 Assigment List
-  table
-    tr
-      th Title
-      th Due Date
-      th Option
-    if files
-      each file in files
-        tr
-          td 
-          td 
-          td
-             a(class='button', href='#') Download
-    else
-      p No Assigments Yet
+  .container
+    h1 Assigment List
+    table
+      tr
+        th Title
+        th Due Date
+        th Option
+      if data
+        each file in data
+          tr
+            td #{file.title}
+            td #{file.dueDate}
+            td
+               a(class='button', href=`download/assigment/${file.key}/${file.originalname}` id='download' ) Download
+      else
+        p No Assigments Yet

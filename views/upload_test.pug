@@ -5,17 +5,11 @@ block content
     h1 #{title}
     form(action="/tests/upload" method="POST" enctype="multipart/form-data")
       #form-group
+        label Title:
+        input.form-control(name='title', type='text', required)
+        br
+      #form-group
         label Select file to upload:  
         input#fileToUpload.form-control(type="file" name="file", required)
         br 
       input.btn.btn-primary(type='submit', value='Upload' name="Upload")
-
-
-        //- #form-group
-        //-   label Title:
-        //-   input.form-control(name='title', type='text', required)
-        //-   br
-        //- #form-group
-        //-   label Test Date:
-        //-   input.form-control(name='test_date', type='date', required)
-        //-   br
